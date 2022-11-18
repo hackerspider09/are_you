@@ -1,0 +1,40 @@
+.box{
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.header{
+    text-align: center;
+}
+#con{
+    border: 2px solid black;
+    padding: 15px;
+    height: 35%;
+    width: 50%;
+    
+} 
+#ipcon{
+    height: 85%;
+    text-align: center;
+    
+}
+
+#nbtn ,#ybtn{
+    position: relative;
+    margin: 25px; 
+}
+
+
+
+
+
+
+ /* position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    center element by transform property */

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .box{
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.header{
+    text-align: center;
+}
+#con{
+    border: 2px solid black;
+    padding: 15px;
+    height: 35%;
+    width: 50%;
+    
+} 
+#ipcon{
+    height: 85%;
+    text-align: center;
+    
+}
+
+#nbtn ,#ybtn{
+    position: relative;
+    margin: 25px; 
+}
+
+
+    </style>
+
+    <link
+      rel="stylesheet"
+      href=
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+ 
+
+    
+
+    <title>Are_You</title>
+</head>
+<body>
+    <div class="box" >
+
+        <div class="border-info" id="con">
+            <div class="header container ">
+                <h2>Are you going to pass in Insem</h2>
+            </div>
+            <div class="ip container " id="ipcon">
+                <input type="button" value="No" class="btn btn-info " id="ybtn">
+                <input type="button" value="Yes" class="btn btn-info" id="nbtn">
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script>
+        var ybtnstat= document.getElementById("ybtn");
+        var nbtnstat= document.getElementById("nbtn");
+
+        const box = document.getElementById("ipcon");
+
+        nbtnstat.addEventListener("mouseover",noverfunc);
+        nbtnstat.addEventListener("mouseout",noutfunc);
+        nbtnstat.addEventListener("click",nclickfunc);
+        function noverfunc() {
+            // nbtnstat.value = "onmouse";
+           
+            let topd=((Math.random()*100)/3)+'%';
+            let leftd=((Math.random()*100)/3)+'%';
+        }
+        function noutfunc() {
+            // nbtnstat.value = "onmouseout";
+            nbtnstat.style.top=((Math.random()*100)/3 )+'%';
+            nbtnstat.style.left=((Math.random()*100)/3)+'%';
+        }
+        function nclickfunc() {
+            // nbtnstat.value = "onmouseclick";
+            nbtnstat.style.top=((Math.random()*100)/3 )+'%';
+            nbtnstat.style.left=((Math.random()*100)/3)+'%';
+        }
+
+        ybtnstat.addEventListener("click",yclickfunc);
+        function yclickfunc() {
+            ybtnstat.style.display= 'none';
+            nbtnstat.style.display=' none';
+
+            let msg= document.createElement("img");
+            msg.src="https://media.makeameme.org/created/mujhe-pata-tha.jpg";
+            msg.style.height='75%';
+            msg.style.width='100%';
+            msg.style.marginTop='10px';
+            box.appendChild(msg);
+            
+        }
+    </script>
+</body>
+</html>
